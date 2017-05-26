@@ -19,3 +19,14 @@ machine, for this I will make the way easy for you as I am providing a vagrantfi
 You just need to have vagrant installed and run:
 
     vagrant up
+
+Now you can "go" grab a cup of coffee while everything gets in place, it will take about 10 minutes to have a machine running.
+
+Once the new machine is installed you will be able to ssh to the machine with the command: 
+
+    vagrant ssh 
+
+
+you will be able to see that /code holds the very same files of this project since I have already mounted a NFS for you, so now, "go" jump to the 
+first lesson and let´s start learning, remember, I am learning too. 
+
