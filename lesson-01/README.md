@@ -78,6 +78,8 @@ What is the $GOPATH variable ? why is that not already set ? well it seems that 
 
     export GOPATH=/code
 
+Better yet, I have already set it for you in the setup.sh file to provision with vagrant
+
 Now, let´s refactor our code again: 
 
     package main 
@@ -87,12 +89,54 @@ Now, let´s refactor our code again:
         )
 
         func testSimplest() {
-            assert.Equal(123, 123, "they should be equal")
+            assert.Equal(123, 12, "they should be equal")
         } 
 
-It now seems like we have the simplest test ready, I have saved it for you in simplestTest.go, now how do we run it ? 
+It now seems like we have the simplest test ready, I have saved it for you in simplest_test.go, why ? 
+because is important to know that the testing files are defined by default *_test.go for them to work.
+Now how do we run it ? 
+
 I will try by just running go command in the cli to see what it does: 
 
+    go
 
+It responds: 
 
+    Usage:
+    
+    	go command [arguments]
+    
+    The commands are:
+    
+        build       compile packages and dependencies
+        clean       remove object files
+        env         print Go environment information
+        fix         run go tool fix on packages
+        fmt         run gofmt on package sources
+        get         download and install packages and dependencies
+        install     compile and install packages and dependencies
+        list        list packages
+        run         compile and run Go program
+        test        test packages
+        tool        run specified go tool
+        version     print Go version
+        vet         run go tool vet on packages
+    
+    Use "go help [command]" for more information about a command.
+    
+    Additional help topics:
+    
+        c           calling between Go and C
+        filetype    file types
+        gopath      GOPATH environment variable
+        importpath  import path syntax
+        packages    description of package lists
+        testflag    description of testing flags
+        testfunc    description of testing functions
+    
+    Use "go help [topic]" for more information about that topic.
+    
+So, now we know that there is a test option, let´s run it: 
 
+    cd /code 
+    go test lesson-01/simple_test.go 

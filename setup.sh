@@ -25,3 +25,10 @@ apt-get install -y git
 # GoLang compiler installation 
 apt-get install -y golang
 
+IS_GOPATH_SET=$(cat /etc/profile | grep GOPATH | wc -c );
+
+echo "Is GOPATH set ? ${IS_GOPATH_SET}"
+
+if [ ${IS_GOPATH_SET} -eq 0 ] ;then 
+    echo 'export GOPATH=/code' >> /etc/profile
+fi
